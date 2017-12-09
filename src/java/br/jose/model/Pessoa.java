@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author jose
  */
-@Model
+//@Model
 public class Pessoa {
     private int id;
     private String nome;
@@ -22,6 +22,10 @@ public class Pessoa {
     private String telefone;
     private String login;
     private String senha;
+        
+    public Pessoa() {
+        super();
+    }
 
     public int getId() {
         return id;

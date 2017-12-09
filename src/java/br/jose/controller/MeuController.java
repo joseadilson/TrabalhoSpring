@@ -5,7 +5,9 @@
  */
 package br.jose.controller;
 
+import br.jose.model.Pessoa;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -22,6 +24,7 @@ public class MeuController {
 
     @RequestMapping("/cadastroPessoa")
     public String pessoa() {
+        
         return "pessoa/cadastroPessoa";
     }
 
@@ -31,8 +34,11 @@ public class MeuController {
     }
 
     @RequestMapping("/salvarPessoa")
-    public String salvarPessoa() {
-        return "conta/cadastroConta";
+    public String salvarPessoa(Model m, Pessoa p) {
+        System.out.println("Script:"+p.getNome());
+        m.addAttribute("pessoa", p);
+        
+        return "mensagemPessoa";
     }
 
     @RequestMapping("/salvarConta")
@@ -50,5 +56,7 @@ public class MeuController {
     @RequestMapping("/buscaMovimento")
     public String buscaMovimento() {
         return "movimento/buscaMovimento";
-    }    
+    } 
+    
+    
 }

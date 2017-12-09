@@ -19,7 +19,7 @@
                 <a href="inicio" class="btn btn-default">Início</a>
             </div> 
             <br>
-            <form action="salvarPessoa">
+            <form action="salvarPessoa" method="post">
                 <div class="form-group col-lg-12 col-md-12 col-xs-12">
                     <label for="nome">Nome</label>
                     <input name="nome" type="nome" class="form-control" id="nome" placeholder="Nome">
@@ -45,7 +45,10 @@
                 </div>   
                 <div class="form-group col-lg-12 col-md-12 col-xs-12">
                     <button type="submit" class="btn btn-primary pull-right">Salvar</button>
-                </div>    
+                </div> 
+                
+                
+                
             </form>
 
         </div>
