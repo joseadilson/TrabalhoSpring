@@ -6544,6 +6544,12 @@ button.close {
 .affix {
   position: fixed;
 }
+
+.jumbotron.login {
+    max-width: 400px !important;
+
+}
+
 @-ms-viewport {
   width: device-width;
 }
@@ -6755,3 +6761,4 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+

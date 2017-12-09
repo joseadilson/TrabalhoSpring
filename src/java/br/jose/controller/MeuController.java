@@ -6,6 +6,10 @@
 package br.jose.controller;
 
 import br.jose.model.Pessoa;
+import com.sun.net.httpserver.HttpServer;
+import java.util.ArrayList;
+import javax.servlet.http.HttpServletRequest;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,15 +20,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class MeuController {
+    private ArrayList a;
+    //private HttpSession session;
 
-    @RequestMapping(value = {"/inicio",""})
+    /*@RequestMapping(value = {"/inicio", ""})
     public String index() {
         return "/index";
-    }
+    }*/
 
     @RequestMapping("/cadastroPessoa")
     public String pessoa() {
-        
+
         return "pessoa/cadastroPessoa";
     }
 
@@ -34,10 +40,22 @@ public class MeuController {
     }
 
     @RequestMapping("/salvarPessoa")
-    public String salvarPessoa(Model m, Pessoa p) {
-        System.out.println("Script:"+p.getNome());
-        m.addAttribute("pessoa", p);
+    public String salvarPessoa(HttpServletRequest r, Pessoa p) {
+        //System.out.println("Script:" + p.getNome());
+
         
+        if (r.getSession().getAttribute("pessoa") == null) {
+            a = new ArrayList();
+        } else {
+            a = (ArrayList) r.getSession().getAttribute("pessoa");
+            
+        }
+
+        a.add(p);
+        //System.err.println(a.size());
+        r.getSession().setAttribute("pessoa", a);
+        //m.addAttribute("pessoa", p);
+
         return "mensagemPessoa";
     }
 
@@ -45,18 +63,15 @@ public class MeuController {
     public String salvarConta() {
         return "salvarConta";
     }
-    
-
 
     @RequestMapping("/cadastrarMovimento")
     public String cadastroMovimento() {
         return "movimento/cadastroMovimento";
     }
-    
+
     @RequestMapping("/buscaMovimento")
     public String buscaMovimento() {
         return "movimento/buscaMovimento";
-    } 
-    
-    
+    }
+
 }

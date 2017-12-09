@@ -43,6 +43,14 @@
                     <label for="telefone">Telefone</label>
                     <input name="telefone" type="tel" class="form-control" id="telefone" placeholder="telefone">
                 </div>   
+                <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                    <label for="login">Login</label>
+                    <input name="login" type="text" class="form-control" id="login" placeholder="login">
+                </div>                  
+                <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                    <label for="senha">Senha</label>
+                    <input name="senha" type="password" class="form-control" id="senha" placeholder="senha">
+                </div>     
                 <div class="form-group col-lg-12 col-md-12 col-xs-12">
                     <button type="submit" class="btn btn-primary pull-right">Salvar</button>
                 </div> 
