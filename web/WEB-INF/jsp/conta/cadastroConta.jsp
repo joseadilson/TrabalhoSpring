@@ -22,7 +22,7 @@
             <form action="salvarConta">
                 <div class="form-group col-lg-12 col-md-12 col-xs-12">
                     <label for="pessoa">Pessoa</label>
-                    <select name="pessoa" class="form-control">
+                    <select name="pessoa_id" class="form-control">
                         <option value="[id-pessoa]">[nome pessoa]</option>
                     </select>
                 </div>
@@ -30,7 +30,7 @@
 
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                     <label for="agencia">Agência</label>
-                    <input type="" class="form-control" id="agencia" placeholder="123">
+                    <input name="agencia" type="" class="form-control" id="agencia" placeholder="123">
                 </div>
 
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
@@ -39,20 +39,20 @@
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button">Go!</button>
                         </span>
-                        <input type="text" id="numeroConta" class="form-control" disabled placeholder="1222">
+                        <input name="numero_conta" type="text" id="numeroConta" class="form-control" disabled placeholder="1222">
                     </div>
                 </div>
 
                 <div class="form-group col-lg-12 col-md-12 col-xs-12">
                     <label for="tipoConta">Tipo Conta</label>
-                    <select name="tipoConta" class="form-control">
+                    <select name="tipo_conta" class="form-control">
                         <option value="POUPANCA">Poupança</option>
                         <option value="CORRENTE">Corrente</option>
                     </select>
                 </div>
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                     <label for="telefone">Saldo </label>
-                    <input type="text" class="form-control" id="telefone" placeholder="telefone">
+                    <input name="telefone" type="text" class="form-control" id="telefone" placeholder="telefone">
                 </div>
                 <div class="form-group col-lg-12 col-md-12 col-xs-12">
                     <button type="submit" class="btn btn-primary pull-right">Salvar Conta</button>

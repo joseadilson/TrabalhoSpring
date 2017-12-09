@@ -20,6 +20,8 @@ public class Pessoa {
     private String cpf;
     private String rg;
     private String telefone;
+    private String login;
+    private String senha;
 
     public int getId() {
         return id;

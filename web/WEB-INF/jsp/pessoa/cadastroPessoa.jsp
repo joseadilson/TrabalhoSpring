@@ -22,26 +22,26 @@
             <form action="salvarPessoa">
                 <div class="form-group col-lg-12 col-md-12 col-xs-12">
                     <label for="nome">Nome</label>
-                    <input type="nome" class="form-control" id="nome" placeholder="Nome">
+                    <input name="nome" type="nome" class="form-control" id="nome" placeholder="Nome">
                 </div>
 
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com">
+                    <input name="email" type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com">
                 </div>
 
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                     <label for="cpf">CPF</label>
-                    <input type="cpf" class="form-control" id="cpf" placeholder="000.000.000-000">
+                    <input name="cpf" type="cpf" class="form-control" id="cpf" placeholder="000.000.000-000">
                 </div>
 
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                     <label for="rg">RG</label>
-                    <input type="rg" class="form-control" id="rg" placeholder="RG">
+                    <input name="rg" type="rg" class="form-control" id="rg" placeholder="RG">
                 </div>
                 <div class="form-group col-lg-6 col-md-6 col-xs-12">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone" placeholder="telefone">
+                    <input name="telefone" type="tel" class="form-control" id="telefone" placeholder="telefone">
                 </div>   
                 <div class="form-group col-lg-12 col-md-12 col-xs-12">
                     <button type="submit" class="btn btn-primary pull-right">Salvar</button>
